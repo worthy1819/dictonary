@@ -11,8 +11,14 @@
     <link rel="website icon" type="png" href="dictionary.png">
     <!-- style  -->
     <style>
+    body {
+        background-image: url(https://img.freepik.com/free-photo/abundant-collection-antique-books-wooden-shelves-generated-by-ai_188544-29660.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     .search input:focus ~ i {
-        color: skyblue;
+        color: white;
     }
 
     .search input:valid ~ span {
@@ -37,7 +43,7 @@
     .content li .details {
         padding-left: 10px;
         border-radius: 4px 0 0 4px;
-        border-left: 4px solid blue;
+        border-left: 4px solid white;
     }
 
     .content li .details p {
@@ -47,7 +53,8 @@
 
     .content li .details span {
         font-size: 15px;
-        color: #7e7e7e;
+        color: white;
+        opacity: .8;
     }
 
     /* .synonyms .details .list span {
@@ -62,7 +69,8 @@
         cursor: pointer;
         /* margin-right: 5px; */
         padding-right: 5px;
-        color: #7e7e7e;
+        color: white;
+        opacity: .8;
         /* justify-content: space-between; */
         text-decoration: underline;
         /* border-bottom: 2px solid red; */
@@ -88,21 +96,21 @@
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen bg-sky-500">
-    <div class="wrapper w-[420px] bg-white rounded-lg pt-7 px-7 pb-11">
-        <header class="text-3xl font-medium text-center">English Dictionary</header>
+    <div class="wrapper w-[420px] backdrop-blur-xl text-white rounded-lg pt-7 px-7 pb-11">
+        <header class="text-3xl font-medium text-center"><i class="fa-solid fa-book-open"></i> English Dictionary</header>
         <div class="search mt-9 mx-0 mb-5 relative">
-            <input type="text" class="h-[53px] w-full outline-none rounded border-2 border-[#999] px-11 text-sm focus:px-10 focus:border-2 focus:border-sky-500" placeholder="Search a word" required>
+            <input type="text" class="h-[53px] text-white w-full outline-none rounded border-2 border-[#999] px-11 text-sm focus:px-10 focus:border-2 focus:border-white bg-transparent" placeholder="Search a word" required>
             <i class="fas fa-search absolute top-1/2 text-[#999] -translate-y-1/2 left-5 pointer-events-none text-sm"></i>
             <span class="material-icons absolute top-1/2 text-[#999] -translate-y-1/2 right-4 cursor-pointer text-sm hidden"><i class="fas fa-close"></i></span>
         </div>
-        <p class="info-text text-[13px] text-[#9a9a9a] -mt-[3px] -mb-[10px]">Type a word and press enter to get meaning, example, pronunciation and synonyms of that typed word.</p>
+        <p class="info-text text-[13px] text-slate-100 -mt-[3px] -mb-[10px]">Type a word and press enter to get meaning, example, pronunciation and synonyms of that typed word...</p>
         <ul class="h-0 opacity-0 overflow-hidden transition-all delay-200 ease-linear">
             <li class="word">
                 <div class="details">
                     <p class="text-2xl font-medium">__</p>
-                    <span class="word2 text-xs text-[#989898]">__</span>
+                    <span class="word2 text-xs text-white/80">__</span>
                 </div>
-                <i class="fas fa-volume-up cursor-pointer text-xs text-[#999]"></i>
+                <i class="fas fa-volume-up cursor-pointer text-xs text-white"></i>
             </li>
             <div class="content max-h-[215px] overflow-y-auto">
                 <li class="meaning">
@@ -128,6 +136,6 @@
     </div>
 
     <script src="app.js"></script>
-
+    <!-- <script src="es6.js"></script> -->
 </body>
 </html>
